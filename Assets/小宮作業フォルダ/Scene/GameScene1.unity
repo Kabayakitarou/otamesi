@@ -2556,6 +2556,12 @@ MonoBehaviour:
   Camera: {fileID: 1184916671}
   PlayerSpeed: 0.02
   RotationSpeed: 0.4
+  PlayerAnimator: {fileID: 772530025}
+--- !u!95 &772530025 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95640976257318950, guid: 60e8218091f83244c9bf9c8c2569a009, type: 3}
+  m_PrefabInstance: {fileID: 1040866853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &776365852
 PrefabInstance:
   m_ObjectHideFlags: 0
