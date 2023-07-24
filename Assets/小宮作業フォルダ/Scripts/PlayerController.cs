@@ -85,4 +85,14 @@ public class PlayerController : MonoBehaviour
             PlayerAnimator.SetBool("Attack", true);
         }
     }
+
+    void WeaponON()
+    {
+
+    }
+
+    void WeaponOFF()
+    {
+        
+    }
 }
