@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public Animator PlayerAnimator;
     bool isRun;
 
+    public Collider WeaponCollider;
+
     // ずっと実行される
     void Update()
     {
@@ -88,11 +90,12 @@ public class PlayerController : MonoBehaviour
 
     void WeaponON()
     {
-
+        WeaponCollider.enabled = true;
     }
 
     void WeaponOFF()
     {
-        
+        WeaponCollider.enabled = false;
+        PlayerAnimator.SetBool("Attack", false);
     }
 }
