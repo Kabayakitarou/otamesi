@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     bool isRun;
 
     public Collider WeaponCollider;
+    bool canMove = true;
 
     // ずっと実行される
     void Update()
@@ -27,6 +28,10 @@ public class PlayerController : MonoBehaviour
 
     void Move()//WASDの操作
     {
+        if(!canMove)
+        {
+            return;
+        }
         speed = Vector3. zero;
         rot = Vector3. zero;
         isRun = false;
@@ -85,6 +90,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             PlayerAnimator.SetBool("Attack", true);
+            canMove = false;
         }
     }
 
@@ -97,5 +103,10 @@ public class PlayerController : MonoBehaviour
     {
         WeaponCollider.enabled = false;
         PlayerAnimator.SetBool("Attack", false);
+    }
+
+    void CanMove()
+    {
+        canMove = true;
     }
 }
