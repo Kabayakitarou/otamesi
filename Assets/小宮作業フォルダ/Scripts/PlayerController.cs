@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
        Move();
        Rotation();
+       Attack();
        Camera. transform. position = transform. position;
     }
 
@@ -74,5 +75,14 @@ public class PlayerController : MonoBehaviour
         }
 
         Camera. transform. eulerAngles += speed;
+    }
+
+
+    void Attack()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            PlayerAnimator.SetBool("Attack", true);
+        }
     }
 }
