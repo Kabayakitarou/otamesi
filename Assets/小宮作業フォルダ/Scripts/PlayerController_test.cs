@@ -28,7 +28,7 @@ public class PlayerController_test : MonoBehaviour
     void Update()
     {
        Move();
-       Rotation();
+
        Attack();
        Camera. transform. position = transform. position;
     }
@@ -76,20 +76,7 @@ public class PlayerController_test : MonoBehaviour
         isRun = true;
     }
 
-    void Rotation()//回転の操作
-    {
-        var speed = Vector3. zero;
-        if(Input.GetKey(KeyCode. LeftArrow))
-        {
-            speed.y = -RotationSpeed;
-        }
-        if(Input.GetKey(KeyCode. RightArrow))
-        {
-            speed.y = RotationSpeed;
-        }
 
-        Camera. transform. eulerAngles += speed;
-    }
 
 
     void Attack()
