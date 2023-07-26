@@ -18,9 +18,10 @@ public class PlayerController_test : MonoBehaviour
 
     void Start () 
     {
+        // カーソルを消す
         Cursor.visible = false;
         // カーソルをウィンドウから出さない
-        Screen.lockCursor = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // ずっと実行される
@@ -32,7 +33,7 @@ public class PlayerController_test : MonoBehaviour
        Camera. transform. position = transform. position;
     }
 
-    void Move()//WASDの操作
+    void Move()// WASDの操作
     {
         if(!canMove)
         {
