@@ -7,6 +7,6 @@ public class Button : MonoBehaviour
 
     public void Onclick()
     {
-        fade.FadeIn(1f, () => SceneManager.LoadScene("GameScene1"));
+        fade.FadeIn(1f, () => SceneManager.LoadScene("GameScene1 1"));
     }
 }

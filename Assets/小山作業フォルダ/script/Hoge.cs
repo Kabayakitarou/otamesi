@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Hoge : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+   [SerializeField] Fade fade;
+   private void Start ()
+   {
+    fade.FadeOut(1f);
+   }
+    
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
