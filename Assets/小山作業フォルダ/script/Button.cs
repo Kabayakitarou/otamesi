@@ -3,10 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
-    
+    [SerializeField] Fade fade;
+
     public void Onclick()
     {
-        SceneManager.LoadScene("GameScene1");
-        
+        fade.FadeIn(1f, () => SceneManager.LoadScene("GameScene1"));
     }
 }
