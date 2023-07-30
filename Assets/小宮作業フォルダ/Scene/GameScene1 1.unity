@@ -1826,7 +1826,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376780307}
-  m_LocalRotation: {x: 0.14955828, y: 0.25873092, z: -0.040585082, w: 0.95343775}
+  m_LocalRotation: {x: 0.14955825, y: 0.25873095, z: -0.04058508, w: 0.95343775}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5569,18 +5569,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 11486218, guid: 53c22e1773be7f84aad8ed8b7b58fa6e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11486218, guid: 53c22e1773be7f84aad8ed8b7b58fa6e, type: 3}
-      propertyPath: cutoutRange
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11491604, guid: 53c22e1773be7f84aad8ed8b7b58fa6e, type: 3}
-      propertyPath: startFade
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 22424616, guid: 53c22e1773be7f84aad8ed8b7b58fa6e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8954,7 +8942,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824593796}
-  m_LocalRotation: {x: 0.114825994, y: 0.2600344, z: -0.031159906, w: 0.95824116}
+  m_LocalRotation: {x: 0.11482599, y: 0.2600344, z: -0.031159904, w: 0.9582412}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerController : MonoBehaviour
 {
     public Transform Camera;
@@ -17,16 +16,24 @@ public class PlayerController : MonoBehaviour
     public Collider WeaponCollider;
     bool canMove = true;
 
+    void Start () 
+    {
+        // カーソルを消す
+        Cursor.visible = false;
+        // カーソルをウィンドウから出さない
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     // ずっと実行される
     void Update()
     {
        Move();
-       Rotation();
+
        Attack();
        Camera. transform. position = transform. position;
     }
 
-    void Move()//WASDの操作
+    void Move()// WASDの操作
     {
         if(!canMove)
         {
@@ -69,20 +76,7 @@ public class PlayerController : MonoBehaviour
         isRun = true;
     }
 
-    void Rotation()//回転の操作
-    {
-        var speed = Vector3. zero;
-        if(Input.GetKey(KeyCode. LeftArrow))
-        {
-            speed.y = -RotationSpeed;
-        }
-        if(Input.GetKey(KeyCode. RightArrow))
-        {
-            speed.y = RotationSpeed;
-        }
 
-        Camera. transform. eulerAngles += speed;
-    }
 
 
     void Attack()
