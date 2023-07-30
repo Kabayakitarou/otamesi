@@ -9,7 +9,6 @@ EditorBuildSettings:
     path: "Assets/\u5C0F\u5C71\u4F5C\u696D\u30D5\u30A9\u30EB\u30C0/Scene/Title.unity"
     guid: 4ccf61fb5566c7c459705bd3c1c50477
   - enabled: 1
-    path: "Assets/\u5C0F\u5BAE\u4F5C\u696D\u30D5\u30A9\u30EB\u30C0/Scene/GameScene1
-      1.unity"
+    path: "Assets/\u5C0F\u5BAE\u4F5C\u696D\u30D5\u30A9\u30EB\u30C0/Scene/GameScene1test.unity"
     guid: 46ba807cd20229d468c3d3d294cdae94
   m_configObjects: {}
