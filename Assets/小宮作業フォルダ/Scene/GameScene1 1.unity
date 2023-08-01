@@ -954,6 +954,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000011310824096, guid: ef49f16d6d1e31248b48d5f57706a650, type: 3}
   m_PrefabInstance: {fileID: 210097432}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &224662083 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 913138923694613490, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+  m_PrefabInstance: {fileID: 913138922917623970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &254266408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1232,7 +1237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311871332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.15, y: 150.83, z: 142.27765}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2023,6 +2028,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012367416494, guid: 3782a82b94eb9d943bc073a9b0e5ad64, type: 3}
   m_PrefabInstance: {fileID: 593684729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &594151751 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1008762289271482017, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+  m_PrefabInstance: {fileID: 913138922917623970}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &611225198
 PrefabInstance:
@@ -5098,7 +5108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180308280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.15, y: 150.83, z: 142.27765}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9470,6 +9480,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 913138922280560584, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: WeaponCollider
+      value: 
+      objectReference: {fileID: 224662083}
+    - target: {fileID: 913138922280560584, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: StarterAssetsThirdPerson
+      value: 
+      objectReference: {fileID: 594151751}
     - target: {fileID: 917613980692552455, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
       propertyPath: m_RootOrder
       value: 0

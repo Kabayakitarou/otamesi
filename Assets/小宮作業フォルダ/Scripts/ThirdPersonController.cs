@@ -14,6 +14,8 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        public Animator StarterAssetsThirdPerson;
+        public Collider WeaponCollider;
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -159,6 +161,24 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            Attack();
+        }
+
+        void Attack()
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                StarterAssetsThirdPerson.SetBool("Attack", true);
+            }
+        }
+        void WeaponON()
+        {
+            WeaponCollider.enabled = true;
+        }
+        void WeaponOFF()
+        {
+            WeaponCollider.enabled = false;
+            StarterAssetsThirdPerson.SetBool("Attack", false);
         }
 
         private void LateUpdate()
