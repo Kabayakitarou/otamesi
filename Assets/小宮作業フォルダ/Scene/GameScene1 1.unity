@@ -9488,6 +9488,10 @@ PrefabInstance:
       propertyPath: StarterAssetsThirdPerson
       value: 
       objectReference: {fileID: 594151751}
+    - target: {fileID: 913138923694613489, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: Effect
+      value: 
+      objectReference: {fileID: 4695789198538889581, guid: c7f638741696dbb4c8f454f915bf53dd, type: 3}
     - target: {fileID: 917613980692552455, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
       propertyPath: m_RootOrder
       value: 0
