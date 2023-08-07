@@ -5,18 +5,16 @@ public class PlayerControllerWeapon : MonoBehaviour
 {
     public Animator StarterAssetsThirdPersonTest;
     public Collider WeaponCollider;
-    bool isRun;
 
     void Start()
     {
-        isRun = false;
+
     }
 
     // ずっと実行される
     void Update()
     {
        Attack();
-       isRun = false;
     }
 
     void Attack()
@@ -32,7 +30,6 @@ public class PlayerControllerWeapon : MonoBehaviour
     }
     void WeaponOFF()
     {
-        isRun = true;
         WeaponCollider.enabled = false;
         StarterAssetsThirdPersonTest.SetBool("Attack", false);
     }

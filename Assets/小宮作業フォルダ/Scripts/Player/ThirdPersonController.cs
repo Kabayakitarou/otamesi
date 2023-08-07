@@ -16,6 +16,10 @@ namespace StarterAssets
     {
         public Animator StarterAssetsThirdPerson;
         public Collider WeaponCollider;
+
+        public AudioSource audioSource;
+        public AudioClip AttackSE;
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -169,6 +173,7 @@ namespace StarterAssets
             if(Input.GetMouseButtonDown(0))
             {
                 StarterAssetsThirdPerson.SetBool("Attack", true);
+                audioSource.PlayOneShot(AttackSE);
             }
         }
         void WeaponON()
