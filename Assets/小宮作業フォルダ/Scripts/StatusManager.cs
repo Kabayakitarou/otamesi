@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StatusManager : MonoBehaviour
 {
     public GameObject Main;
     public int HP;
     public int MaxHP;
+    public Image HPGage;
 
     public GameObject Effect;
     public AudioSource audioSorce;
@@ -24,6 +26,9 @@ public class StatusManager : MonoBehaviour
             Destroy(effect, 5);
             Destroy(Main);
         }
+
+        float percent = (float)HP / MaxHP;
+        HPGage.fillAmount = percent;
     }
 
     private void OnTriggerEnter(Collider other)

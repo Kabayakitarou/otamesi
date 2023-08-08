@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(this.gameObject, time);//敵の破壊
+        //Destroy(this.gameObject, time);//敵の破壊
     }
 
     // Update is called once per frame
