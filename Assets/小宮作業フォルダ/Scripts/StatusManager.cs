@@ -15,7 +15,6 @@ public class StatusManager : MonoBehaviour
     public AudioClip HitSE;
 
     public string TagName;
-
     private void Update()
     {
         if(HP <= 0)
