@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 15
-  EnemySpeed: 0.01
+  EnemySpeed: 0.005
 --- !u!135 &3442459025704870165
 SphereCollider:
   m_ObjectHideFlags: 0
