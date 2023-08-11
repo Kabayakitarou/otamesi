@@ -244,7 +244,6 @@ namespace StarterAssets
         {
             if (_animator.GetBool("Attack_CanMove"))
             {
-                Debug.Log ("attack is enabled");
                 // set target speed based on move speed, sprint speed and if sprint is pressed
                 float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
