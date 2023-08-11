@@ -318,15 +318,15 @@ GameObject:
   - component: {fileID: 8071891400960154283}
   - component: {fileID: 4923429505825202343}
   - component: {fileID: 5323115888294816577}
-  - component: {fileID: 3616260259134569467}
   - component: {fileID: 3442459025704870165}
+  - component: {fileID: 8534911311537824359}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8162256828708265849
 Transform:
   m_ObjectHideFlags: 0
@@ -357,7 +357,7 @@ Animator:
   m_GameObject: {fileID: 8165318492965375401}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0d3c605385d6d9547a1e3f24e8248962, type: 3}
-  m_Controller: {fileID: 9100000, guid: 91233093179807b4092413e67a583c70, type: 2}
+  m_Controller: {fileID: 9100000, guid: a74c9f97de7bcb447a7e05c56d3ec638, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -396,25 +396,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &3616260259134569467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8165318492965375401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0362cb2835213514fa4c6e3027c955ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemy1controller: {fileID: 8071891400960154283}
-  Timer: 0
-  ChangeTime: 8
-  WalkSpeed: 0.003
-  RunSpeed: 0.008
-  target: {fileID: 0}
-  myself: {fileID: 0}
 --- !u!135 &3442459025704870165
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -428,6 +409,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 10
   m_Center: {x: 0, y: 0, z: 10}
+--- !u!114 &8534911311537824359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8165318492965375401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911714e0b548209469cd5103cc569e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy2controller: {fileID: 8071891400960154283}
+  Timer: 0
+  ChangeTime: 3
+  WalkSpeed: 0.003
+  RunSpeed: 0.008
+  target: {fileID: 912098419604597999, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+  myself: {fileID: 8165318492965375401}
 --- !u!1 &8165376654340128671
 GameObject:
   m_ObjectHideFlags: 0

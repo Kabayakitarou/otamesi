@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class Enemy2Controller : MonoBehaviour
 {
-    public Animator Enemy1controller;
+    public Animator Enemy2controller;
     public float Timer;
     public float ChangeTime;
     public float WalkSpeed;
@@ -20,7 +20,7 @@ public class EnemyController : MonoBehaviour
         speed.z = WalkSpeed;
         var rot = transform.eulerAngles;
 
-        Enemy1controller.SetBool("Run", false);
+        Enemy2controller.SetBool("Run", false);
 
         Vector3 targetPos = target.transform.position;
         Vector3 myselfPos = myself.transform.position;
@@ -30,13 +30,13 @@ public class EnemyController : MonoBehaviour
             transform.LookAt(Target.transform);
             rot = transform.eulerAngles;
             speed.z = RunSpeed;
-            Enemy1controller.SetBool("Run", true);
+            Enemy2controller.SetBool("Run", true);
             if(Vector3.Distance(target.transform.position, myself.transform.position) <= 5f)
             {
-                Enemy1controller.SetBool("Run", false);
+                Enemy2controller.SetBool("Run", false);
                 print("Distance to other: " + Vector3.Distance(target.transform.position, myself.transform.position));
                 speed.z = 0;
-                Enemy1controller.SetBool("Attack", true);
+                Enemy2controller.SetBool("Attack", true);
             }
 
         }
@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour
                 float WalkIdle = Random.Range(0, 1);
                 if(WalkIdle == 0)
                 {
-                    Enemy1controller.SetBool("Walk", true);
+                    Enemy2controller.SetBool("Walk", true);
                     float rand = Random.Range(0, 360);
                     rot.y = rand;
                     Timer = 0;
@@ -56,7 +56,7 @@ public class EnemyController : MonoBehaviour
                 else if(WalkIdle == 1)
                 {
                     speed.z = 0;
-                    Enemy1controller.SetBool("Walk", false);
+                    Enemy2controller.SetBool("Walk", false);
                 }
             }
         }

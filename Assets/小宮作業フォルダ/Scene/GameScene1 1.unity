@@ -6151,6 +6151,8 @@ MonoBehaviour:
   Enemy2: {fileID: 8165318492965375401, guid: e46536692a78fb2428ab125b290fb3ca, type: 3}
   EnemyPlace1: {fileID: 311871333}
   EnemyPlace2: {fileID: 1180308281}
+  Count: 0
+  MaxCount: 10
 --- !u!4 &1250152227
 Transform:
   m_ObjectHideFlags: 0
@@ -10104,6 +10106,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3578840830256708904, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: HPGage
+      value: 
+      objectReference: {fileID: 211712979}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
 --- !u!1001 &3803574770273790611
