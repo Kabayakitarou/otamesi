@@ -9,8 +9,6 @@ public class Enemy1Controller : MonoBehaviour
     public float ChangeTime;
     public float WalkSpeed;
     public float RunSpeed;
-    public GameObject target;
-    public GameObject myself;
     GameObject Target;
 
     // Update is called once per frame
@@ -22,23 +20,12 @@ public class Enemy1Controller : MonoBehaviour
 
         Enemy1controller.SetBool("Run", false);
 
-        Vector3 targetPos = target.transform.position;
-        Vector3 myselfPos = myself.transform.position;
-
         if(Target)
         {
             transform.LookAt(Target.transform);
             rot = transform.eulerAngles;
             speed.z = RunSpeed;
             Enemy1controller.SetBool("Run", true);
-            if(Vector3.Distance(target.transform.position, myself.transform.position) <= 5f)
-            {
-                Enemy1controller.SetBool("Run", false);
-                print("Distance to other: " + Vector3.Distance(target.transform.position, myself.transform.position));
-                speed.z = 0;
-                Enemy1controller.SetBool("Attack", true);
-            }
-
         }
         else
         {

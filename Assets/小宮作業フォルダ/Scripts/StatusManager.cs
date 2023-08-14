@@ -14,7 +14,8 @@ public class StatusManager : MonoBehaviour
     public AudioSource audioSorce;
     public AudioClip HitSE;
 
-    public string TagName;
+    public string DamageDetermination;
+    public string AttackDetermination;
     private void Update()
     {
         if(HP <= 0)
@@ -32,9 +33,14 @@ public class StatusManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == TagName)
+        if(other.tag == DamageDetermination)
         {
             Damage();
+        }
+
+        if(other.tag == AttackDetermination)
+        {
+            AttackRange.instance.Attack();
         }
     }
 

@@ -197,6 +197,7 @@ Transform:
   - {fileID: 3597222846027997589}
   - {fileID: 984534337800021042}
   - {fileID: 7993159104559383012}
+  - {fileID: 5759282212635365725}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -210,7 +211,7 @@ Animator:
   m_GameObject: {fileID: 7077716202267795447}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 032e9c3d6b8f7bd4281b52741574f3af, type: 3}
-  m_Controller: {fileID: 9100000, guid: a74c9f97de7bcb447a7e05c56d3ec638, type: 2}
+  m_Controller: {fileID: 9100000, guid: aa095188a0444f04485a2db7a0374eed, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -279,8 +280,6 @@ MonoBehaviour:
   ChangeTime: 5
   WalkSpeed: 0.005
   RunSpeed: 0.01
-  target: {fileID: 912098419604597999, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-  myself: {fileID: 7077716202267795447}
 --- !u!1 &7077906510888389635
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +663,65 @@ Transform:
   m_Father: {fileID: 7075263823772823135}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8129505456269041999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5759282212635365725}
+  - component: {fileID: 3943995318181559278}
+  - component: {fileID: 3254877338800053460}
+  m_Layer: 0
+  m_Name: AttackRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5759282212635365725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129505456269041999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7075580671595936329}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3943995318181559278
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129505456269041999}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3254877338800053460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8129505456269041999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5451f7584f3927419357686b32f2689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 7164625447147089307}
 --- !u!1001 &1674107971180583018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -844,6 +902,14 @@ PrefabInstance:
       propertyPath: audioSorce
       value: 
       objectReference: {fileID: 2624227612969574404}
+    - target: {fileID: 4397351368116691929, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
+      propertyPath: AttackDetermination
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397351368116691929, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
+      propertyPath: DamageDetermination
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 6844443855594386568, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
       propertyPath: m_Name
       value: StatusMangaer
