@@ -171,8 +171,8 @@ GameObject:
   - component: {fileID: 7164625447147089307}
   - component: {fileID: 2791622082681275474}
   - component: {fileID: 3029122658705910381}
-  - component: {fileID: 6033905492660684822}
   - component: {fileID: 567943941933086613}
+  - component: {fileID: 8994287709764195856}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -250,19 +250,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!135 &6033905492660684822
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7077716202267795447}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 5}
 --- !u!114 &567943941933086613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +267,19 @@ MonoBehaviour:
   ChangeTime: 5
   WalkSpeed: 0.005
   RunSpeed: 0.01
+--- !u!65 &8994287709764195856
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077716202267795447}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 3, z: 8}
+  m_Center: {x: 0, y: 1, z: 2.75}
 --- !u!1 &7077906510888389635
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +707,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3254877338800053460
 MonoBehaviour:
@@ -722,6 +722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 7164625447147089307}
+  AttackDetermination: Player
 --- !u!1001 &1674107971180583018
 PrefabInstance:
   m_ObjectHideFlags: 0

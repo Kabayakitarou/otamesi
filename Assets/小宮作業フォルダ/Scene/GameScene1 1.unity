@@ -1247,14 +1247,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311871332}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.82, y: 0.502, z: 3}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -1.7000625, y: 0.502, z: 3.9931324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &313133703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5408,14 +5408,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180308280}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2.076}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -1.1199379, y: 0, z: 1.0828688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1180561662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5906,7 +5906,7 @@ MonoBehaviour:
   EnemyPlace1: {fileID: 311871333}
   EnemyPlace2: {fileID: 1180308281}
   Count: 0
-  MaxCount: 10
+  MaxCount: 2
 --- !u!4 &1250152227
 Transform:
   m_ObjectHideFlags: 0
@@ -9772,6 +9772,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012797962896, guid: 946d6139259d35444ae7eafbdf8f87fe, type: 3}
   m_PrefabInstance: {fileID: 2110704067}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &2144595911 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1093159512, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+  m_PrefabInstance: {fileID: 913138922917623970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &913138922917623970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9794,7 +9799,7 @@ PrefabInstance:
     - target: {fileID: 913138922280560584, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2144595911}
     - target: {fileID: 913138922280560584, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
       propertyPath: WeaponCollider
       value: 
@@ -9871,7 +9876,8 @@ PrefabInstance:
       propertyPath: DamageDetermination
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 913138923694613489, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
 --- !u!1001 &3803574770273790611
 PrefabInstance:

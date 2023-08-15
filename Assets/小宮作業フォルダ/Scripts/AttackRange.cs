@@ -5,16 +5,32 @@ using UnityEngine;
 public class AttackRange : MonoBehaviour
 {
     public Animator Animator;
-    public static AttackRange instance {get; private set; }
-    // Start is called before the first frame update
-    public void Awake()
+    public string AttackDetermination;
+
+    private void OnTriggerEnter(Collider other)
     {
-        instance = this;
+        if(other.tag == AttackDetermination)
+        {
+            Attack();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == AttackDetermination)
+        {
+            AttackStop();
+        }
     }
 
     // Update is called once per frame
     public void Attack()
     {
         Animator.SetBool("Attack", true);
+    }
+
+    public void AttackStop()
+    {
+        Animator.SetBool("Attack", false);
     }
 }

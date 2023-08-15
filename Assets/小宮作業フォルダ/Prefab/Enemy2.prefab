@@ -182,7 +182,6 @@ MonoBehaviour:
   audioSorce: {fileID: 4641890385024389728}
   HitSE: {fileID: 8300000, guid: 1ebb79309939aa241bad27840c6d02f3, type: 3}
   DamageDetermination: Weapon
-  AttackDetermination: Player
 --- !u!54 &1963152967221146532
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -221,8 +220,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3019987137792588293}
-  - component: {fileID: 538585472578575655}
   - component: {fileID: 5152345789793070555}
+  - component: {fileID: 538585472578575655}
   m_Layer: 0
   m_Name: AttackRange
   m_TagString: Untagged
@@ -245,6 +244,19 @@ Transform:
   m_Father: {fileID: 8162256828708265849}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5152345789793070555
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991470274852499410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &538585472578575655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,19 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 8071891400960154283}
---- !u!65 &5152345789793070555
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6991470274852499410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  AttackDetermination: Player
 --- !u!1 &8165308732450622223
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,8 +378,8 @@ GameObject:
   - component: {fileID: 8071891400960154283}
   - component: {fileID: 4923429505825202343}
   - component: {fileID: 5323115888294816577}
-  - component: {fileID: 3442459025704870165}
   - component: {fileID: 8534911311537824359}
+  - component: {fileID: 1644372006419688848}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -457,19 +457,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!135 &3442459025704870165
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8165318492965375401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 0, y: 0, z: 10}
 --- !u!114 &8534911311537824359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +474,19 @@ MonoBehaviour:
   ChangeTime: 3
   WalkSpeed: 0.003
   RunSpeed: 0.008
+--- !u!65 &1644372006419688848
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8165318492965375401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 3, z: 10}
+  m_Center: {x: 0, y: 1, z: 3.75}
 --- !u!1 &8165376654340128671
 GameObject:
   m_ObjectHideFlags: 0

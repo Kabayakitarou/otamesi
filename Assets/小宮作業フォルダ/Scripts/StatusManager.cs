@@ -15,7 +15,6 @@ public class StatusManager : MonoBehaviour
     public AudioClip HitSE;
 
     public string DamageDetermination;
-    public string AttackDetermination;
     private void Update()
     {
         if(HP <= 0)
@@ -36,11 +35,6 @@ public class StatusManager : MonoBehaviour
         if(other.tag == DamageDetermination)
         {
             Damage();
-        }
-
-        if(other.tag == AttackDetermination)
-        {
-            AttackRange.instance.Attack();
         }
     }
 

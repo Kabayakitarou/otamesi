@@ -15,7 +15,6 @@ public class Enemy1Controller : MonoBehaviour
     void Update()
     {
         var speed = Vector3.zero;//敵の移動速度
-        speed.z = WalkSpeed;
         var rot = transform.eulerAngles;
 
         Enemy1controller.SetBool("Run", false);
@@ -29,6 +28,7 @@ public class Enemy1Controller : MonoBehaviour
         }
         else
         {
+            speed.z = WalkSpeed;
             Timer += Time.deltaTime;
             if(ChangeTime <= Timer)
             {
