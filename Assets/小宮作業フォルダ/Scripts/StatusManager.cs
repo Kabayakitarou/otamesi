@@ -8,6 +8,7 @@ public class StatusManager : MonoBehaviour
     public GameObject Main;
     public int HP;
     public int MaxHP;
+    public GameObject HPCanvas;
     public Image HPGage;
 
     public GameObject Effect;
@@ -24,6 +25,7 @@ public class StatusManager : MonoBehaviour
             effect.transform.position = transform.position;
             Destroy(effect, 5);
             Destroy(Main);
+            Destroy(HPCanvas);
         }
 
         float percent = (float)HP / MaxHP;
