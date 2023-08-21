@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3319431039742730096}
   - component: {fileID: 9221226678105425995}
   - component: {fileID: 6610435529086103433}
-  - component: {fileID: 7077586093089607767}
   - component: {fileID: 1478604458658049179}
   - component: {fileID: 4397351368116691929}
   m_Layer: 0
@@ -86,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7077586093089607767
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6844443855594386568}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4, y: 1.2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1478604458658049179
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -130,8 +116,9 @@ MonoBehaviour:
   Main: {fileID: 0}
   HP: 3
   MaxHP: 3
+  HPCanvas: {fileID: 0}
   HPGage: {fileID: 0}
   Effect: {fileID: 4695789198538889581, guid: c7f638741696dbb4c8f454f915bf53dd, type: 3}
   audioSorce: {fileID: 0}
   HitSE: {fileID: 8300000, guid: 1ebb79309939aa241bad27840c6d02f3, type: 3}
-  TagName: Weapon
+  DamageDetermination: 

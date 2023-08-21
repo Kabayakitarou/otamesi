@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackRange : MonoBehaviour
+public class EnemyAttackRange : MonoBehaviour
 {
     public Animator Animator;
     public string AttackDetermination;

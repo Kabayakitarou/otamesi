@@ -835,6 +835,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &796321813895262695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2033016980042246541, guid: 1367af6ae01184f4b81f4961940c3862, type: 3}
+  m_PrefabInstance: {fileID: 1674107971180583018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7993159104559383012 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8779423942171384206, guid: 1367af6ae01184f4b81f4961940c3862, type: 3}
@@ -857,11 +862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3319431039742730096, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.591
+      value: 0.502
       objectReference: {fileID: 0}
     - target: {fileID: 3319431039742730096, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.018
       objectReference: {fileID: 0}
     - target: {fileID: 3319431039742730096, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -900,6 +905,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 747308589990050914}
     - target: {fileID: 4397351368116691929, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
+      propertyPath: HPCanvas
+      value: 
+      objectReference: {fileID: 796321813895262695}
+    - target: {fileID: 4397351368116691929, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
       propertyPath: audioSorce
       value: 
       objectReference: {fileID: 2624227612969574404}
@@ -922,3 +931,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3319431039742730096, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
   m_PrefabInstance: {fileID: 2304466348030197477}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4685787069033777773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6844443855594386568, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
+  m_PrefabInstance: {fileID: 2304466348030197477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6357067628738948178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4685787069033777773}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -177,6 +177,7 @@ MonoBehaviour:
   Main: {fileID: 8165318492965375401}
   HP: 5
   MaxHP: 5
+  HPCanvas: {fileID: 8488746720821212929}
   HPGage: {fileID: 8403142301083515524}
   Effect: {fileID: 5526253132134822371, guid: cd890f7fefe419c46b7a3b1306d55ca8, type: 3}
   audioSorce: {fileID: 4641890385024389728}
@@ -1579,3 +1580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8488746720821212929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2033016980042246541, guid: 1367af6ae01184f4b81f4961940c3862, type: 3}
+  m_PrefabInstance: {fileID: 7636042313584483980}
+  m_PrefabAsset: {fileID: 0}

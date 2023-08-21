@@ -16,6 +16,7 @@ public class StatusManager : MonoBehaviour
     public AudioClip HitSE;
 
     public string DamageDetermination;
+    
     private void Update()
     {
         if(HP <= 0)
