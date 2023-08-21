@@ -14,6 +14,8 @@ public class Enemy2Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Enemy2controller = GetComponent<Animator>();
+
         var speed = Vector3.zero;//敵の移動速度
         var rot = transform.eulerAngles;
 
@@ -46,6 +48,11 @@ public class Enemy2Controller : MonoBehaviour
                     Enemy2controller.SetBool("Walk", false);
                 }
             }
+        }
+
+        if (Enemy2controller.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            speed.z = 0;
         }
 
         rot.x = 0;

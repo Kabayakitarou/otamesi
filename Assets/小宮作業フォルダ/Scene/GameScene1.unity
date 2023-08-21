@@ -10302,6 +10302,18 @@ PrefabInstance:
       propertyPath: DamageDetermination
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4673400760338043584, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: enemyList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4673400760338043584, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: enemyList.Array.data[0]
+      value: 
+      objectReference: {fileID: 7077716202267795447, guid: 0d5bc83a1a7f6fe429729e0f41437a97, type: 3}
+    - target: {fileID: 4673400760338043584, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: enemyList.Array.data[1]
+      value: 
+      objectReference: {fileID: 8165318492965375401, guid: e46536692a78fb2428ab125b290fb3ca, type: 3}
     m_RemovedComponents:
     - {fileID: 913138923694613489, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
