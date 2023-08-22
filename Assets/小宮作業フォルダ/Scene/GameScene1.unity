@@ -10295,6 +10295,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 211712979}
     - target: {fileID: 3578840830256708904, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 594151751}
+    - target: {fileID: 3578840830256708904, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
       propertyPath: HPCanvas
       value: 
       objectReference: {fileID: 306097888}

@@ -15,6 +15,14 @@ public class EnemyAttackRange : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == AttackDetermination)
+        {
+            Attack();
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if(other.tag == AttackDetermination)
@@ -26,11 +34,11 @@ public class EnemyAttackRange : MonoBehaviour
     // Update is called once per frame
     public void Attack()
     {
-        Animator.SetBool("Attack", true);
+        Animator.SetTrigger("Attack");
     }
 
     public void AttackStop()
     {
-        Animator.SetBool("Attack", false);
+        Animator.SetTrigger("Attack");
     }
 }

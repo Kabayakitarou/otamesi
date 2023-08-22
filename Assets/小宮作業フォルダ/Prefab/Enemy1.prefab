@@ -905,6 +905,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 747308589990050914}
     - target: {fileID: 4397351368116691929, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 7164625447147089307}
+    - target: {fileID: 4397351368116691929, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
       propertyPath: HPCanvas
       value: 
       objectReference: {fileID: 796321813895262695}
@@ -919,6 +923,10 @@ PrefabInstance:
     - target: {fileID: 4397351368116691929, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
       propertyPath: DamageDetermination
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610435529086103433, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6844443855594386568, guid: 9cb095deec366dc4285c88ed99a84c0e, type: 3}
       propertyPath: m_Name

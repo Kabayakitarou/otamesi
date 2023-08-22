@@ -183,6 +183,7 @@ MonoBehaviour:
   audioSorce: {fileID: 4641890385024389728}
   HitSE: {fileID: 8300000, guid: 1ebb79309939aa241bad27840c6d02f3, type: 3}
   DamageDetermination: Weapon
+  Animator: {fileID: 0}
 --- !u!54 &1963152967221146532
 Rigidbody:
   m_ObjectHideFlags: 0

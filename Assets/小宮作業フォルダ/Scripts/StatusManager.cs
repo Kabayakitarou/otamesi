@@ -16,6 +16,8 @@ public class StatusManager : MonoBehaviour
     public AudioClip HitSE;
 
     public string DamageDetermination;
+
+    public Animator Animator;
     
     private void Update()
     {
@@ -43,6 +45,7 @@ public class StatusManager : MonoBehaviour
 
     void Damage()
     {
+        Animator.SetTrigger("Hit");
         audioSorce.PlayOneShot(HitSE);
         HP--;
     }
