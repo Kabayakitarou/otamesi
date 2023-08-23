@@ -100,6 +100,7 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
+        private float AttackTime;
 
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
@@ -137,6 +138,8 @@ namespace StarterAssets
 
         private void Start()
         {
+            AttackTime = 0;
+
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
             _hasAnimator = TryGetComponent(out _animator);
@@ -169,11 +172,28 @@ namespace StarterAssets
         {
             if(Input.GetMouseButtonDown(0))
             {
-                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend"))
+                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend") && (AttackTime < 2))
                 {
+                    AttackTime += Time.deltaTime;
                     StarterAssetsThirdPerson.SetBool("Attack_CanMove", false);
                     audioSource.PlayOneShot(AttackSE);
                 }
+
+                if ((_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend")) && (AttackTime <= 2))
+                {
+                    StarterAssetsThirdPerson.SetInteger("Attack", 1);
+                    audioSource.PlayOneShot(AttackSE);
+                }
+
+                if ((_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend")) && (AttackTime <= 4))
+                {
+                    StarterAssetsThirdPerson.SetInteger("Attack", 2);
+                    audioSource.PlayOneShot(AttackSE);
+                }
+            }
+            if (AttackTime > 4)
+            {
+                AttackTime = 3;
             }
         }
         void WeaponON()
@@ -184,7 +204,7 @@ namespace StarterAssets
         void WeaponOFF()
         {
             WeaponCollider.enabled = false;
-            StarterAssetsThirdPerson.SetBool("Attack_CanMove", true);
+            StarterAssetsThirdPerson.SetInteger("Attack", 3);
         }
 
         private void LateUpdate()
@@ -239,7 +259,7 @@ namespace StarterAssets
 
         private void Move()
         {
-            if (_animator.GetBool("Attack_CanMove"))
+            if (_animator.GetInteger("Attack") == 3)
             {
                 // set target speed based on move speed, sprint speed and if sprint is pressed
                 float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
