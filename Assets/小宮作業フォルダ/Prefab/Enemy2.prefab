@@ -273,6 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 8071891400960154283}
   AttackDetermination: Player
+  enemycontroller: {fileID: 8534911311537824359}
 --- !u!1 &8165308732450622223
 GameObject:
   m_ObjectHideFlags: 0

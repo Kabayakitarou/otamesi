@@ -172,28 +172,13 @@ namespace StarterAssets
         {
             if(Input.GetMouseButtonDown(0))
             {
+                AttackTime = 0;
                 if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend") && (AttackTime < 2))
                 {
                     AttackTime += Time.deltaTime;
                     StarterAssetsThirdPerson.SetBool("Attack_CanMove", false);
                     audioSource.PlayOneShot(AttackSE);
                 }
-
-                if ((_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend")) && (AttackTime <= 2))
-                {
-                    StarterAssetsThirdPerson.SetInteger("Attack", 1);
-                    audioSource.PlayOneShot(AttackSE);
-                }
-
-                if ((_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend")) && (AttackTime <= 4))
-                {
-                    StarterAssetsThirdPerson.SetInteger("Attack", 2);
-                    audioSource.PlayOneShot(AttackSE);
-                }
-            }
-            if (AttackTime > 4)
-            {
-                AttackTime = 3;
             }
         }
         void WeaponON()
@@ -204,7 +189,7 @@ namespace StarterAssets
         void WeaponOFF()
         {
             WeaponCollider.enabled = false;
-            StarterAssetsThirdPerson.SetInteger("Attack", 3);
+            StarterAssetsThirdPerson.SetBool("Attack_CanMove", true);
         }
 
         private void LateUpdate()
@@ -259,7 +244,7 @@ namespace StarterAssets
 
         private void Move()
         {
-            if (_animator.GetInteger("Attack") == 3)
+            if (_animator.GetBool("Attack_CanMove"))
             {
                 // set target speed based on move speed, sprint speed and if sprint is pressed
                 float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;

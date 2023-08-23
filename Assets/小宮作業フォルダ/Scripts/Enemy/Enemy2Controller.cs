@@ -60,6 +60,13 @@ public class Enemy2Controller : MonoBehaviour
         transform.eulerAngles = rot;
 
         this.transform.Translate(speed);
+
+    }
+
+    public void Attack()
+    {
+        Enemy2controller.SetTrigger("Attack");
+        Invoke("Attack", 3.0f);
     }
 
     private void OnTriggerEnter(Collider other)
