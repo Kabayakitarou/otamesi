@@ -10230,7 +10230,7 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
-    - target: {fileID: 913138923694613489, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+    - target: {fileID: 0}
       propertyPath: Effect
       value: 
       objectReference: {fileID: 4695789198538889581, guid: c7f638741696dbb4c8f454f915bf53dd, type: 3}
@@ -10318,8 +10318,7 @@ PrefabInstance:
       propertyPath: enemyList.Array.data[1]
       value: 
       objectReference: {fileID: 8165318492965375401, guid: e46536692a78fb2428ab125b290fb3ca, type: 3}
-    m_RemovedComponents:
-    - {fileID: 913138923694613489, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
 --- !u!1001 &3803574770273790611
 PrefabInstance:

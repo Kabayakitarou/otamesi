@@ -4116,7 +4116,6 @@ GameObject:
   - component: {fileID: 913138923694613488}
   - component: {fileID: 913138923694613491}
   - component: {fileID: 913138923694613490}
-  - component: {fileID: 913138923694613489}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Weapon
@@ -4202,18 +4201,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &913138923694613489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913138923694613484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d5710af89dc0d44aa05efd8ea6d350b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &914094637443619989
 GameObject:
   m_ObjectHideFlags: 0
