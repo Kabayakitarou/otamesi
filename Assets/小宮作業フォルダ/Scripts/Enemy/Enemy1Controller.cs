@@ -62,6 +62,12 @@ public class Enemy1Controller : MonoBehaviour
         this.transform.Translate(speed);
     }
 
+    public void Attack()
+    {
+        Enemy1controller.SetTrigger("Attack");
+        Invoke("Attack", 3.0f);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")

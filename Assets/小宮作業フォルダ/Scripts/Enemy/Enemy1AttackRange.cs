@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttackRange : MonoBehaviour
+public class Enemy1AttackRange : MonoBehaviour
 {
     public string AttackDetermination;
-    public Enemy2Controller enemycontroller;
+    public Enemy1Controller enemycontroller;
 
     private void OnTriggerStay(Collider other)
     {

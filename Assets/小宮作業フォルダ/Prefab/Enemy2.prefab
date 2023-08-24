@@ -137,9 +137,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6333848101355098723}
-  - component: {fileID: 4389007476015560762}
   - component: {fileID: 1963152967221146532}
   - component: {fileID: 7068481367274846010}
+  - component: {fileID: 96023465035812606}
   m_Layer: 0
   m_Name: StatusManager
   m_TagString: Enemy
@@ -162,28 +162,6 @@ Transform:
   m_Father: {fileID: 8162256828708265849}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4389007476015560762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6795943411485322843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd4391de09b50964b976812c5a6d64c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Main: {fileID: 8165318492965375401}
-  HP: 5
-  MaxHP: 5
-  HPCanvas: {fileID: 8488746720821212929}
-  HPGage: {fileID: 8403142301083515524}
-  Effect: {fileID: 5526253132134822371, guid: cd890f7fefe419c46b7a3b1306d55ca8, type: 3}
-  audioSorce: {fileID: 4641890385024389728}
-  HitSE: {fileID: 8300000, guid: 1ebb79309939aa241bad27840c6d02f3, type: 3}
-  DamageDetermination: Weapon
-  Animator: {fileID: 8071891400960154283}
 --- !u!54 &1963152967221146532
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -213,6 +191,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.18, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &96023465035812606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795943411485322843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcdfe11acd8ba5f4bbb512aa2db98ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Main: {fileID: 8165318492965375401}
+  HP: 5
+  MaxHP: 5
+  HPCanvas: {fileID: 8488746720821212929}
+  HPGage: {fileID: 8403142301083515524}
+  Effect: {fileID: 5526253132134822371, guid: cd890f7fefe419c46b7a3b1306d55ca8, type: 3}
+  audioSorce: {fileID: 4641890385024389728}
+  HitSE: {fileID: 8300000, guid: 1ebb79309939aa241bad27840c6d02f3, type: 3}
+  DamageDetermination: Weapon
+  Animator: {fileID: 8071891400960154283}
 --- !u!1 &6991470274852499410
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3019987137792588293}
   - component: {fileID: 5152345789793070555}
-  - component: {fileID: 538585472578575655}
+  - component: {fileID: 6985241308249281117}
   m_Layer: 0
   m_Name: AttackRange
   m_TagString: Untagged
@@ -259,7 +259,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &538585472578575655
+--- !u!114 &6985241308249281117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271,7 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5451f7584f3927419357686b32f2689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 8071891400960154283}
   AttackDetermination: Player
   enemycontroller: {fileID: 8534911311537824359}
 --- !u!1 &8165308732450622223

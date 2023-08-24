@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StatusManager : MonoBehaviour
+public class EnemyStatusManager : MonoBehaviour
 {
     public GameObject Main;
     public int HP;
     public int MaxHP;
-    public Text TextHP;
     public GameObject HPCanvas;
     public Image HPGage;
 
@@ -34,7 +33,6 @@ public class StatusManager : MonoBehaviour
 
         float percent = (float)HP / MaxHP;
         HPGage.fillAmount = percent;
-        TextHP.text = HP.ToString();
     }
 
     private void OnTriggerEnter(Collider other)

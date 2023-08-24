@@ -89,6 +89,7 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
+        private float _stamina = 8.0f;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -288,10 +289,8 @@ namespace StarterAssets
                 // if there is a move input rotate player when the player is moving
                 if (_input.move != Vector2.zero)
                 {
-                    _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg +
-                                    _mainCamera.transform.eulerAngles.y;
-                    float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
-                        RotationSmoothTime);
+                    _targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + _mainCamera.transform.eulerAngles.y;
+                    float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
 
                     // rotate to face input direction relative to camera position
                     transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
@@ -301,8 +300,7 @@ namespace StarterAssets
                 Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
                 // move the player
-                _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
-                                new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+                _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
                 // update animator if using character
                 if (_hasAnimator)
@@ -312,6 +310,13 @@ namespace StarterAssets
                 }
 
             }
+
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Female Sword Sprint"))
+            {
+                _stamina -= Time.deltaTime;       
+            }
+
+            _animator.SetFloat("Stamina", _stamina);
         }
 
         private void JumpAndGravity()
