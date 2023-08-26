@@ -7,7 +7,7 @@ public class StatusManager : MonoBehaviour
 {
     public GameObject Main;
     public int HP;
-    public int MaxHP;
+    private int MaxHP;
     public Text TextHP;
     public GameObject HPCanvas;
     public Image HPGage;
@@ -20,6 +20,12 @@ public class StatusManager : MonoBehaviour
 
     public Animator Animator;
     
+    public int GetSetProperty
+    {
+        get { return MaxHP; }
+        set { MaxHP = value; }
+    }
+
     private void Update()
     {
         if(HP <= 0)
