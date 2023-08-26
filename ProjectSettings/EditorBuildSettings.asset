@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/\u5C0F\u5C71\u4F5C\u696D\u30D5\u30A9\u30EB\u30C0/Scene/sleep.unity"
     guid: 84a63d7f7524b5341b4f2c2e7e82fe54
+  - enabled: 1
+    path: "Assets/\u5C0F\u5BAE\u4F5C\u696D\u30D5\u30A9\u30EB\u30C0/Scene/StepCount.unity"
+    guid: 35a918f06457bfb4dbccddeba793d96b
   m_configObjects: {}
