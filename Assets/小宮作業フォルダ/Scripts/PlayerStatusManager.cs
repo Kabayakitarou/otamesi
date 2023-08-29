@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StatusManager : MonoBehaviour
+public class PlayerStatusManager : MonoBehaviour
 {
     public GameObject Main;
     public int HP;
-    private int MaxHP;
+    public int MaxHP;
     public Text TextHP;
     public GameObject HPCanvas;
     public Image HPGage;
@@ -30,6 +30,8 @@ public class StatusManager : MonoBehaviour
             Destroy(effect, 5);
             Destroy(Main);
             Destroy(HPCanvas);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
         }
 
         float percent = (float)HP / MaxHP;

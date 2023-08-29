@@ -7084,7 +7084,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5931318152808884857, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
   m_PrefabInstance: {fileID: 913138922917623970}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1443373847
+--- !u!114 &1443373853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7093,11 +7093,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443373840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd4391de09b50964b976812c5a6d64c5, type: 3}
+  m_Script: {fileID: 11500000, guid: adf0c1a4b77d26e49bd3e11946e00127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Main: {fileID: 1888224045}
   HP: 10
+  MaxHP: 10
   TextHP: {fileID: 1313911530}
   HPCanvas: {fileID: 306097888}
   HPGage: {fileID: 211712979}
@@ -10546,6 +10547,10 @@ PrefabInstance:
     - target: {fileID: 3803574770403195566, guid: 561db1c12787c3a49a326606040557ab, type: 3}
       propertyPath: m_Name
       value: PlayerFollowCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803574770403195566, guid: 561db1c12787c3a49a326606040557ab, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 561db1c12787c3a49a326606040557ab, type: 3}

@@ -20,5 +20,7 @@ public class GameOver : MonoBehaviour
     public void GameReStart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Cursor.visible = false;
+        
     }
 }

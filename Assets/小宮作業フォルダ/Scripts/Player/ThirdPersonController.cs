@@ -89,7 +89,6 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
-        private float _stamina = 8.0f;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -101,7 +100,6 @@ namespace StarterAssets
         private int _animIDJump;
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
-        private float AttackTime;
 
 #if ENABLE_INPUT_SYSTEM 
         private PlayerInput _playerInput;
@@ -139,8 +137,6 @@ namespace StarterAssets
 
         private void Start()
         {
-            AttackTime = 0;
-
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
             _hasAnimator = TryGetComponent(out _animator);
@@ -173,10 +169,8 @@ namespace StarterAssets
         {
             if(Input.GetMouseButtonDown(0))
             {
-                AttackTime = 0;
-                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend") && (AttackTime < 2))
+                if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend"))
                 {
-                    AttackTime += Time.deltaTime;
                     StarterAssetsThirdPerson.SetBool("Attack_CanMove", false);
                     audioSource.PlayOneShot(AttackSE);
                 }
@@ -310,13 +304,6 @@ namespace StarterAssets
                 }
 
             }
-
-            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Female Sword Sprint"))
-            {
-                _stamina -= Time.deltaTime;       
-            }
-
-            _animator.SetFloat("Stamina", _stamina);
         }
 
         private void JumpAndGravity()
