@@ -11,6 +11,9 @@ public class EnemyStatusManager : MonoBehaviour
     public GameObject HPCanvas;
     public Image HPGage;
 
+    public StepCountButton stepCountButton;
+    public float EXP;
+
     public GameObject Effect;
     public AudioSource audioSorce;
     public AudioClip HitSE;
@@ -18,7 +21,7 @@ public class EnemyStatusManager : MonoBehaviour
     public string DamageDetermination;
 
     public Animator Animator;
-    
+
     private void Update()
     {
         if(HP <= 0)
@@ -29,8 +32,10 @@ public class EnemyStatusManager : MonoBehaviour
             Destroy(effect, 5);
             Destroy(Main);
             Destroy(HPCanvas);
+            EXP += 10;
         }
 
+        EXP = stepCountButton.PlayerExp;
         float percent = (float)HP / MaxHP;
         HPGage.fillAmount = percent;
     }

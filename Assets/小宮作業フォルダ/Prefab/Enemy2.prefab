@@ -208,6 +208,7 @@ MonoBehaviour:
   MaxHP: 5
   HPCanvas: {fileID: 8488746720821212929}
   HPGage: {fileID: 8403142301083515524}
+  stepCountButton: {fileID: 1752100490221419886, guid: ad4c78cdd280fe742b1e2f185f75f338, type: 3}
   Effect: {fileID: 5526253132134822371, guid: cd890f7fefe419c46b7a3b1306d55ca8, type: 3}
   audioSorce: {fileID: 4641890385024389728}
   HitSE: {fileID: 8300000, guid: 1ebb79309939aa241bad27840c6d02f3, type: 3}

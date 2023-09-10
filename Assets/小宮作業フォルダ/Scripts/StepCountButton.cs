@@ -16,12 +16,21 @@ public class StepCountButton : MonoBehaviour
         textInput = textInput.GetComponent<InputField>();
 
         int PlayerExp = 0;
+        slider.value = 0;
     }
 
-    public void OnClick()
+    void Update()
+    {
+        slider.value = PlayerExp/1000;
+    }
+
+    public void Click()
     {
         int input = int.Parse(textInput.text);
         PlayerExp += input;
-        slider.value = PlayerExp/1000;
+        if (PlayerExp > 1000){
+            PlayerExp = 0;
+            PlayerLevel += 1;
+        }
     }
 }

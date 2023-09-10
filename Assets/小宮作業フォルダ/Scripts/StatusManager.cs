@@ -12,6 +12,9 @@ public class StatusManager : MonoBehaviour
     public GameObject HPCanvas;
     public Image HPGage;
 
+    public Slider slider;
+    public StepCountButton stepCountButton;
+
     public GameObject Effect;
     public AudioSource audioSorce;
     public AudioClip HitSE;
@@ -30,6 +33,7 @@ public class StatusManager : MonoBehaviour
             Destroy(effect, 5);
             Destroy(Main);
             Destroy(HPCanvas);
+            stepCountButton.PlayerExp = stepCountButton.PlayerExp + 10;
         }
 
         float percent = (float)HP / MaxHP;
