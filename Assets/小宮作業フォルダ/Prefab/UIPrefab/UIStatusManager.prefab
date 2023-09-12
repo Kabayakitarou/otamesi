@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1752100490221419883
+--- !u!1 &8573624599072486413
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1752100490221419881}
-  - component: {fileID: 1752100490221419880}
-  - component: {fileID: 1752100490221419886}
+  - component: {fileID: 8573624599072486415}
+  - component: {fileID: 8573624599072486414}
+  - component: {fileID: 8573624599072486408}
   m_Layer: 0
-  m_Name: StatusManager
+  m_Name: UIStatusManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1752100490221419881
+--- !u!4 &8573624599072486415
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752100490221419883}
+  m_GameObject: {fileID: 8573624599072486413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 940.49097, y: 480.2008, z: 329.26617}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,26 +33,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1752100490221419880
+--- !u!114 &8573624599072486414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752100490221419883}
+  m_GameObject: {fileID: 8573624599072486413}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cf7ab54e042f9046b549db3d9231557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   StepCount: {fileID: 0}
---- !u!114 &1752100490221419886
+--- !u!114 &8573624599072486408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752100490221419883}
+  m_GameObject: {fileID: 8573624599072486413}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1812c9b25c492544fb314e01d5de87fd, type: 3}
@@ -60,5 +60,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerExp: 0
   PlayerLevel: 1
-  textInput: {fileID: 0}
-  slider: {fileID: 0}
+  textInput: {fileID: 5872082418778424737, guid: 012548e5237b56a4ca693f1ce18d8ad3, type: 3}
+  slider: {fileID: 4482159887447526930, guid: 6338ed88d3604af4aafa607cec27db26, type: 3}

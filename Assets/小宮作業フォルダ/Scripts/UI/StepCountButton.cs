@@ -13,10 +13,9 @@ public class StepCountButton : MonoBehaviour
 
     void Start()
     {
-        textInput = textInput.GetComponent<InputField>();
-
-        int PlayerExp = 0;
+        float PlayerExp = 0;
         slider.value = 0;
+        textInput = textInput.GetComponent<InputField>();
     }
 
     void Update()
@@ -28,9 +27,15 @@ public class StepCountButton : MonoBehaviour
     {
         int input = int.Parse(textInput.text);
         PlayerExp += input;
-        if (PlayerExp > 1000){
-            PlayerExp = 0;
+        if (PlayerExp > 1000)
+        {
+            PlayerExp -= PlayerLevel*1000;
             PlayerLevel += 1;
         }
+    }
+
+    public void EnemyDead()
+    {
+        PlayerExp += 200;
     }
 }

@@ -19,6 +19,8 @@ public class EnemyStatusManager : MonoBehaviour
 
     public Animator Animator;
 
+    public StepCountButton stepCountButton;
+
     private void Update()
     {
         if(HP <= 0)
@@ -29,6 +31,7 @@ public class EnemyStatusManager : MonoBehaviour
             Destroy(effect, 5);
             Destroy(Main);
             Destroy(HPCanvas);
+            Dead();
         }
 
         float percent = (float)HP / MaxHP;
@@ -48,5 +51,10 @@ public class EnemyStatusManager : MonoBehaviour
         Animator.SetTrigger("Hit");
         audioSorce.PlayOneShot(HitSE);
         HP--;
+    }
+
+    public void Dead()
+    {
+        stepCountButton.EnemyDead();
     }
 }
