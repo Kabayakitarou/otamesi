@@ -8,8 +8,6 @@ public class PlayerStatusManager : MonoBehaviour
     public GameObject Main;
     public int HP;
     public int MaxHP;
-    public int PlayerLevel;
-    public int exp;
     public Text TextHP;
     public GameObject HPCanvas;
     public Image HPGage;
