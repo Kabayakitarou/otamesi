@@ -2818,6 +2818,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8573624599072486408, guid: 01927776b0200734f8d634110b15a089, type: 3}
+      propertyPath: PlayerExp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8573624599072486408, guid: 01927776b0200734f8d634110b15a089, type: 3}
       propertyPath: textInput
       value: 
       objectReference: {fileID: 301260748}
@@ -8265,7 +8269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1701539509
 Transform:
   m_ObjectHideFlags: 0
