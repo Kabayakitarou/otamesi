@@ -5,15 +5,16 @@ using UnityEngine.UI;
  
 public class StepCountButton : MonoBehaviour 
 {
-    public float PlayerExp;
-    public int PlayerLevel;
+    public static int PlayerExp;
+    public static int PlayerLevel;
     public InputField textInput;
 
     public Slider slider;
 
     void Start()
     {
-        float PlayerExp = 0;
+        int PlayerExp = 0;
+        int PlayerLevel = 1;
         slider.value = 0;
         textInput = textInput.GetComponent<InputField>();
     }
@@ -27,11 +28,12 @@ public class StepCountButton : MonoBehaviour
     {
         int input = int.Parse(textInput.text);
         PlayerExp += input;
-        if (PlayerExp > 1000)
+        if (PlayerExp >= 1000)
         {
-            PlayerExp -= PlayerLevel*1000;
-            PlayerLevel += 1;
+            PlayerLevel += PlayerExp/1000;
+            PlayerExp = 0;
         }
+        textInput.text = "";
     }
 
     public void EnemyDead()
