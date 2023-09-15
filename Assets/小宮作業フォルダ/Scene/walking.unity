@@ -666,10 +666,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIStatusManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8573624599072486414, guid: 01927776b0200734f8d634110b15a089, type: 3}
-      propertyPath: StepCount
-      value: 
-      objectReference: {fileID: 1908354589}
     - target: {fileID: 8573624599072486415, guid: 01927776b0200734f8d634110b15a089, type: 3}
       propertyPath: m_RootOrder
       value: 4

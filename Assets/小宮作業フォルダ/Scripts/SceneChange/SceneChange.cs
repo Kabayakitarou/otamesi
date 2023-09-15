@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
  
 public class SceneChange: MonoBehaviour 
 {
-    //GameScene1 to StepCount
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.C))
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.C))
         {
             ChangeScene();
         }
@@ -16,6 +14,8 @@ public class SceneChange: MonoBehaviour
 
     void ChangeScene()
     {
-        SceneManager.LoadScene("StepCount");
+        SceneManager.LoadScene("enter");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 }
