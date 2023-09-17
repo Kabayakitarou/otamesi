@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class StepCountButton : MonoBehaviour 
 {
     public int PlayerExp;
-    public int PlayerLevel;
+    public static int PlayerLevel = 1;
     public InputField textInput;
 
     public Slider slider;

@@ -10,7 +10,7 @@ public class PlayerLevel : MonoBehaviour
 
     void Update()
     {
-        stepCountButton = GameObject.Find("UIStatusManager").GetComponent<StepCountButton>();
-        textUI.text = stepCountButton.PlayerLevel.ToString();
+        string StringText = StepCountButton.PlayerLevel.ToString();
+        textUI.text = StringText;
     }
 }
