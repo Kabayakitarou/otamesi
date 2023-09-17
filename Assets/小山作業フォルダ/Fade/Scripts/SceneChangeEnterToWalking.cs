@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class button: MonoBehaviour {
+public class SceneChangeEnterToWalking: MonoBehaviour {
 
       
       public void change_button()
