@@ -8950,7 +8950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepCountButton: {fileID: 0}
-  textUI: {fileID: 0}
+  textUI: {fileID: 1845298881}
 --- !u!114 &1845298881
 MonoBehaviour:
   m_ObjectHideFlags: 0
