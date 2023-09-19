@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class PlayerLevel : MonoBehaviour
 {
-    public StepCountButton stepCountButton;
     public Text textUI;
+    public Slider slider;
 
-    void Update()
-    {
+    void Update(){
         string StringText = StepCountButton.PlayerLevel.ToString();
         textUI.text = StringText;
+        
+        //int SliderValue = StepCountButton.SliderExp;
+        slider.value = StepCountButton.SliderExp;
+        
     }
 }

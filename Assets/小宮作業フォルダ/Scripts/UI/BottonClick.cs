@@ -6,11 +6,6 @@ public class BottonClick : MonoBehaviour
 {
     public StepCountButton stepCountButton;
 
-    void Start()
-    {
-        stepCountButton.PlayerExp = 0;
-    }
-
     public void OnClick()
     {
         stepCountButton.Click();
