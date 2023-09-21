@@ -2696,6 +2696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 670959337}
+  - component: {fileID: 670959338}
   m_Layer: 0
   m_Name: PlayerLevel
   m_TagString: Untagged
@@ -2719,6 +2720,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670959338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670959336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f29837ab4345e4385eef2b486ebb17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textUI: {fileID: 1845298881}
+  slider: {fileID: 702638990}
+  psm: {fileID: 1443373853}
 --- !u!1 &702638988
 GameObject:
   m_ObjectHideFlags: 0
@@ -7251,8 +7267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Main: {fileID: 1888224045}
-  HP: 10
-  MaxHP: 10
+  HP: 100
+  MaxHP: 100
   TextHP: {fileID: 1313911530}
   HPCanvas: {fileID: 306097888}
   HPGage: {fileID: 211712979}
@@ -9107,7 +9123,6 @@ GameObject:
   - component: {fileID: 1845298879}
   - component: {fileID: 1845298882}
   - component: {fileID: 1845298881}
-  - component: {fileID: 1845298880}
   m_Layer: 5
   m_Name: Level
   m_TagString: Untagged
@@ -9135,20 +9150,6 @@ RectTransform:
   m_AnchoredPosition: {x: -166.95, y: 180.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1845298880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845298878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f29837ab4345e4385eef2b486ebb17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textUI: {fileID: 1845298881}
-  slider: {fileID: 702638990}
 --- !u!114 &1845298881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9182,7 +9183,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: '1
+
+'
 --- !u!222 &1845298882
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11072,6 +11075,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130701309}
   m_CullTransparentMesh: 1
+--- !u!1 &2137195830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2137195832}
+  m_Layer: 0
+  m_Name: LevelUpObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2137195832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137195830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 239.99995, y: 960, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2144595911 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1093159512, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}

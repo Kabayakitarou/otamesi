@@ -33,7 +33,8 @@ public class PlayerStatusManager : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
         }
-
+        MaxHP = StepCountButton.PlayerLevel*100;
+        HP = MaxHP;
         float percent = (float)HP / MaxHP;
         HPGage.fillAmount = percent;
         TextHP.text = HP.ToString();

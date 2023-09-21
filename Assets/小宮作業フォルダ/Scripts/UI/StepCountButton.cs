@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class StepCountButton : MonoBehaviour 
 {
     public static int PlayerExp = 0;
-    public static int SliderExp = 0;
-    public static int PlayerLevel = 0;
+    //public static int SliderExp = 0;
+    public static int PlayerLevel = 1;
 
     public InputField textInput;
 
@@ -22,12 +22,11 @@ public class StepCountButton : MonoBehaviour
         PlayerExp += input;
         if (PlayerExp >= 1000*PlayerLevel)
         {
-            PlayerLevel = PlayerExp/1000;
-            Debug.Log(PlayerLevel);
-            Debug.Log(PlayerExp);
+            PlayerLevel = PlayerExp/1000 + 1;
+            PlayerLevelScript.instance.LevelUp();
+            //Debug.Log("PlayerLevel : " + PlayerLevel);
+            //Debug.Log("PlayerExp : " + PlayerExp);
         }
-        int SliderExp = PlayerExp - PlayerLevel*1000;
-        Debug.Log(SliderExp);
         textInput.text = "";
     }
 
