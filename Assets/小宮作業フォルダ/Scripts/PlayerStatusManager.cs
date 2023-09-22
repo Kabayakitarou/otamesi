@@ -19,6 +19,11 @@ public class PlayerStatusManager : MonoBehaviour
     public string DamageDetermination;
 
     public Animator Animator;
+    public Animator enemy1animator;
+    private Enemy1Controller enemy1Controller;
+
+    void Start(){
+    }
 
     private void Update()
     {
@@ -44,14 +49,17 @@ public class PlayerStatusManager : MonoBehaviour
     {
         if(other.tag == DamageDetermination)
         {
-            Damage();
+            if (enemy1animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+                Damage();
+            }
         }
     }
 
     void Damage()
     {
+        enemy1Controller = GameObject.Find("Enemy1").GetComponent<Enemy1Controller>();
         Animator.SetTrigger("Hit");
         audioSorce.PlayOneShot(HitSE);
-        HP--;
+        HP -= enemy1Controller.AttackDamage;
     }
 }

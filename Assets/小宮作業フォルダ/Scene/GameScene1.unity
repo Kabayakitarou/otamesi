@@ -7111,6 +7111,7 @@ MonoBehaviour:
   HitSE: {fileID: 8300000, guid: 1ebb79309939aa241bad27840c6d02f3, type: 3}
   DamageDetermination: Enemy
   Animator: {fileID: 594151751}
+  enemy1animator: {fileID: 7164625447147089307, guid: 0d5bc83a1a7f6fe429729e0f41437a97, type: 3}
 --- !u!1001 &1456576711
 PrefabInstance:
   m_ObjectHideFlags: 0

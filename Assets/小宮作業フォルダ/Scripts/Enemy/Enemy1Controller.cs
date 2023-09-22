@@ -9,27 +9,32 @@ public class Enemy1Controller : MonoBehaviour
     public float ChangeTime;
     public float WalkSpeed;
     public float RunSpeed;
-    GameObject Target;
+    public int AttackDamage = 5;
+    internal GameObject Target;
 
-    // Update is called once per frame
-    void Update()
+    void Start(){
+        Enemy1controller.SetBool("Run", false);
+    }
+
+    public void Update()
     {
         Enemy1controller = GetComponent<Animator>();
 
         var speed = Vector3.zero;//敵の移動速度
         var rot = transform.eulerAngles;
 
-        Enemy1controller.SetBool("Run", false);
-
-        if(Target)
+        if(Target)//Playerを見つけた
         {
+            Enemy1controller.SetBool("Run", true);
             transform.LookAt(Target.transform);
             rot = transform.eulerAngles;
+            RunSpeed = 0.008f;
             speed.z = RunSpeed;
-            Enemy1controller.SetBool("Run", true);
         }
         else
         {
+            Enemy1controller.SetBool("Run", false);
+            WalkSpeed = 0.005f;
             speed.z = WalkSpeed;
             Timer += Time.deltaTime;
             if(ChangeTime <= Timer)
@@ -62,10 +67,13 @@ public class Enemy1Controller : MonoBehaviour
         this.transform.Translate(speed);
     }
 
-    public void Attack()
+    public void AttackGo()
     {
-        Enemy1controller.SetTrigger("Attack");
-        Invoke("Attack", 3.0f);
+        Enemy1controller.SetBool("Run", false);
+        Invoke("Attack", 1.0f);
+    }
+    public void Attack(){
+        Enemy1controller.SetBool("Attack", true);
     }
 
     private void OnTriggerEnter(Collider other)

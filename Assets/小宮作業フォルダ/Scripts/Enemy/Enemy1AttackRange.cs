@@ -5,13 +5,34 @@ using UnityEngine;
 public class Enemy1AttackRange : MonoBehaviour
 {
     public string AttackDetermination;
-    public Enemy1Controller enemycontroller;
+    public Enemy1Controller enemy1controller;
+    public Animator Enemy1controller;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag == AttackDetermination)
         {
-            enemycontroller.Attack();
+            Enemy1controller.SetBool("Run", false);
+            //enemy1controller.Target = other.gameObject;
+            enemy1controller.AttackGo();
+        }
+    }
+
+    /*private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == AttackDetermination)
+        {
+            Enemy1controller.SetBool("Run", false);
+            enemy1controller.AttackGo();
+        }
+    }*/
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == AttackDetermination)
+        {
+            enemy1controller.Update();
+            Enemy1controller.SetBool("Attack", false);
         }
     }
 }
