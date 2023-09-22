@@ -13,19 +13,9 @@ public class Enemy1AttackRange : MonoBehaviour
         if(other.tag == AttackDetermination)
         {
             Enemy1controller.SetBool("Run", false);
-            //enemy1controller.Target = other.gameObject;
             enemy1controller.AttackGo();
         }
     }
-
-    /*private void OnTriggerStay(Collider other)
-    {
-        if(other.tag == AttackDetermination)
-        {
-            Enemy1controller.SetBool("Run", false);
-            enemy1controller.AttackGo();
-        }
-    }*/
 
     private void OnTriggerExit(Collider other)
     {
@@ -33,6 +23,7 @@ public class Enemy1AttackRange : MonoBehaviour
         {
             enemy1controller.Update();
             Enemy1controller.SetBool("Attack", false);
+            enemy1controller.attacked = 0;
         }
     }
 }

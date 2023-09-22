@@ -213,7 +213,6 @@ MonoBehaviour:
   HitSE: {fileID: 8300000, guid: 1ebb79309939aa241bad27840c6d02f3, type: 3}
   DamageDetermination: Weapon
   Animator: {fileID: 8071891400960154283}
-  stepCountButton: {fileID: 8573624599072486408, guid: 01927776b0200734f8d634110b15a089, type: 3}
 --- !u!1 &6991470274852499410
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackDetermination: Player
-  enemycontroller: {fileID: 8534911311537824359}
+  enemy2controller: {fileID: 8534911311537824359}
+  Enemy2controller: {fileID: 8071891400960154283}
 --- !u!1 &8165308732450622223
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8162256828708265849
 Transform:
   m_ObjectHideFlags: 0
@@ -475,8 +475,9 @@ MonoBehaviour:
   Enemy2controller: {fileID: 8071891400960154283}
   Timer: 0
   ChangeTime: 3
-  WalkSpeed: 0.003
-  RunSpeed: 0.008
+  WalkSpeed: 0.002
+  RunSpeed: 0.005
+  AttackDamage: 5
 --- !u!65 &1644372006419688848
 BoxCollider:
   m_ObjectHideFlags: 0

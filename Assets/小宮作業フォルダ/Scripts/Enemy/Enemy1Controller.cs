@@ -12,6 +12,8 @@ public class Enemy1Controller : MonoBehaviour
     public int AttackDamage = 5;
     internal GameObject Target;
 
+    public int attacked;
+
     void Start(){
         Enemy1controller.SetBool("Run", false);
     }
@@ -74,6 +76,8 @@ public class Enemy1Controller : MonoBehaviour
     }
     public void Attack(){
         Enemy1controller.SetBool("Attack", true);
+        Debug.Log("Attack");
+        attacked = 1;
     }
 
     private void OnTriggerEnter(Collider other)

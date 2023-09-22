@@ -19,8 +19,7 @@ public class PlayerStatusManager : MonoBehaviour
     public string DamageDetermination;
 
     public Animator Animator;
-    public Animator enemy1animator;
-    private Enemy1Controller enemy1Controller;
+    public Enemy1Controller enemy1Controller;
 
     void Start(){
     }
@@ -45,13 +44,12 @@ public class PlayerStatusManager : MonoBehaviour
         TextHP.text = HP.ToString();
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
-        if(other.tag == DamageDetermination)
+        if(other.tag == DamageDetermination & enemy1Controller.attacked == 1)
         {
-            if (enemy1animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
-                Damage();
-            }
+            Debug.Log("Damage");
+            Damage();
         }
     }
 

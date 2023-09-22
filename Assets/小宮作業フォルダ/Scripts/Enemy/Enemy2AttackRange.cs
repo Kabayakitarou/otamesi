@@ -5,13 +5,24 @@ using UnityEngine;
 public class Enemy2AttackRange : MonoBehaviour
 {
     public string AttackDetermination;
-    public Enemy2Controller enemycontroller;
+    public Enemy2Controller enemy2controller;
+    public Animator Enemy2controller;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag == AttackDetermination)
         {
-            enemycontroller.Attack();
+            Enemy2controller.SetBool("Run", false);
+            enemy2controller.AttackGo();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == AttackDetermination)
+        {
+            enemy2controller.Update();
+            Enemy2controller.SetBool("Attack", false);
         }
     }
 }
