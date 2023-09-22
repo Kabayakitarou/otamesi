@@ -21,8 +21,8 @@ public class PlayerLevelScript : MonoBehaviour
     }
 
     void Update(){
-        int SliderExp = StepCountButton.PlayerExp % 1000;
-        PlayerEXPtext.text = SliderExp + " / " + StepCountButton.PlayerLevel*1000;
+        //int SliderExp = StepCountButton.PlayerExp % 1000;
+        PlayerEXPtext.text = StepCountButton.PlayerExp + " / " + StepCountButton.PlayerLevel*1000;
     }
 
     public void LevelUp(){

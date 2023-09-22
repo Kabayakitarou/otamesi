@@ -1196,6 +1196,10 @@ PrefabInstance:
       value: InputFieldStepCount
       objectReference: {fileID: 0}
     - target: {fileID: 5872082419535767426, guid: 012548e5237b56a4ca693f1ce18d8ad3, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5872082419535767426, guid: 012548e5237b56a4ca693f1ce18d8ad3, type: 3}
       propertyPath: m_FontData.m_HorizontalOverflow
       value: 1
       objectReference: {fileID: 0}
