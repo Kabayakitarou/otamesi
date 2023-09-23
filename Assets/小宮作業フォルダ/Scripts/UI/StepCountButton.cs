@@ -13,7 +13,6 @@ public class StepCountButton : MonoBehaviour
     void Start()
     {
         textInput = textInput.GetComponent<InputField>();
-        
     }
 
     public void Click()
@@ -28,6 +27,11 @@ public class StepCountButton : MonoBehaviour
             PlayerLevelScript.instance.LevelUp();
         }
         textInput.text = "";
-    }
 
+        string textstring = null;
+        if(string.IsNullOrEmpty(textstring)){
+            textInput.text = "";
+        }
+    }
+    
 }
