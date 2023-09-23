@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PlayerStatusManager : MonoBehaviour
 {
     public GameObject Main;
-    public static int HP = 100;
-    public static int MaxHP = 100;
+    public int HP;
+    public int MaxHP;
     public Text TextHP;
     public GameObject HPCanvas;
     public Image HPGage;
@@ -19,14 +19,13 @@ public class PlayerStatusManager : MonoBehaviour
     public string DamageDetermination;
 
     public Animator Animator;
-    public Enemy1Controller enemy1Controller;
 
     private bool PlayerDamage = true;
     public static int Damagenum = 0;
 
     public static PlayerStatusManager instance;
 
-    void Start(){
+    private void Awake(){
         if (instance == null)
         {
             instance = this;
@@ -55,25 +54,30 @@ public class PlayerStatusManager : MonoBehaviour
         float percent = (float)HP / MaxHP;
         HPGage.fillAmount = percent;
         TextHP.text = HP.ToString();
+        Debug.Log(PlayerStatusManager.instance.HP);
     }
 
-    public void OnTriggerStay(Collider other)
-    {
+    /*public void LevelUpPSM(){
+        MaxHP = StepCountButton.PlayerLevel*100;
+        Debug.Log(MaxHP);
+        HP = MaxHP;
+        //TextHP.text = HP.ToString();
+    }*/
+
+    public void OnTriggerStay(Collider other){
         if(other.tag == DamageDetermination){
             PlayerDamage = true;
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
+    void OnTriggerExit(Collider other){
         if(other.tag == DamageDetermination){
-            bool PlayerDamage = false;
+            PlayerDamage = false;
         }
     }
 
     public void EnemyAttack(){
         if(PlayerDamage == true){
-            Debug.Log("Damage");
             Damage();
         }
     }

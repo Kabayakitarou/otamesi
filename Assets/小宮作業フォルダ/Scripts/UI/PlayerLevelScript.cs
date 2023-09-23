@@ -7,7 +7,6 @@ public class PlayerLevelScript : MonoBehaviour
 {
     public Text textUI;
     public Text PlayerEXPtext;
-    public PlayerStatusManager psm;
     public static PlayerLevelScript instance;
 
     private void Awake(){
@@ -21,7 +20,6 @@ public class PlayerLevelScript : MonoBehaviour
     }
 
     void Update(){
-        //int SliderExp = StepCountButton.PlayerExp % 1000;
         PlayerEXPtext.text = StepCountButton.PlayerExp + " / " + StepCountButton.PlayerLevel*1000;
     }
 

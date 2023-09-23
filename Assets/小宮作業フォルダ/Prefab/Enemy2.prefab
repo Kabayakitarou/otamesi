@@ -472,12 +472,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 911714e0b548209469cd5103cc569e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy2controller: {fileID: 8071891400960154283}
+  Enemy2animator: {fileID: 8071891400960154283}
   Timer: 0
   ChangeTime: 3
   WalkSpeed: 0.002
   RunSpeed: 0.005
-  AttackDamage: 5
 --- !u!65 &1644372006419688848
 BoxCollider:
   m_ObjectHideFlags: 0
