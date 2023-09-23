@@ -24,8 +24,7 @@ public class StepCountButton : MonoBehaviour
         {
             PlayerLevel = PlayerExp/1000 + 1;
             PlayerLevelScript.instance.LevelUp();
-            //Debug.Log("PlayerLevel : " + PlayerLevel);
-            //Debug.Log("PlayerExp : " + PlayerExp);
+            PlayerStatusManager.HP = PlayerStatusManager.MaxHP;
         }
         textInput.text = "";
     }

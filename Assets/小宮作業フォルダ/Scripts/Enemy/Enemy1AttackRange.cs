@@ -23,7 +23,6 @@ public class Enemy1AttackRange : MonoBehaviour
         {
             enemy1controller.Update();
             Enemy1controller.SetBool("Attack", false);
-            enemy1controller.attacked = 0;
         }
     }
 }

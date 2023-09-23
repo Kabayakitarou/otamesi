@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy1Controller : MonoBehaviour
 {
-    public Animator Enemy1controller;
+    public Animator Enemy1animator;
     public float Timer;
     public float ChangeTime;
     public float WalkSpeed;
@@ -12,22 +12,20 @@ public class Enemy1Controller : MonoBehaviour
     public int AttackDamage = 5;
     internal GameObject Target;
 
-    public int attacked;
-
     void Start(){
-        Enemy1controller.SetBool("Run", false);
+        Enemy1animator.SetBool("Run", false);
     }
 
     public void Update()
     {
-        Enemy1controller = GetComponent<Animator>();
+        Enemy1animator = GetComponent<Animator>();
 
         var speed = Vector3.zero;//敵の移動速度
         var rot = transform.eulerAngles;
 
         if(Target)//Playerを見つけた
         {
-            Enemy1controller.SetBool("Run", true);
+            Enemy1animator.SetBool("Run", true);
             transform.LookAt(Target.transform);
             rot = transform.eulerAngles;
             RunSpeed = 0.008f;
@@ -35,7 +33,7 @@ public class Enemy1Controller : MonoBehaviour
         }
         else
         {
-            Enemy1controller.SetBool("Run", false);
+            Enemy1animator.SetBool("Run", false);
             WalkSpeed = 0.005f;
             speed.z = WalkSpeed;
             Timer += Time.deltaTime;
@@ -44,7 +42,7 @@ public class Enemy1Controller : MonoBehaviour
                 float WalkIdle = Random.Range(0, 1);
                 if(WalkIdle == 0)
                 {
-                    Enemy1controller.SetBool("Walk", true);
+                    Enemy1animator.SetBool("Walk", true);
                     float rand = Random.Range(0, 360);
                     rot.y = rand;
                     Timer = 0;
@@ -52,12 +50,12 @@ public class Enemy1Controller : MonoBehaviour
                 else if(WalkIdle == 1)
                 {
                     speed.z = 0;
-                    Enemy1controller.SetBool("Walk", false);
+                    Enemy1animator.SetBool("Walk", false);
                 }
             }
         }
 
-        if (Enemy1controller.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        if (Enemy1animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
             speed.z = 0;
         }
@@ -69,15 +67,18 @@ public class Enemy1Controller : MonoBehaviour
         this.transform.Translate(speed);
     }
 
+    void EnemyAttackOn(){
+        PlayerStatusManager.instance.EnemyAttack();
+    }
+
+
     public void AttackGo()
     {
-        Enemy1controller.SetBool("Run", false);
+        Enemy1animator.SetBool("Run", false);
         Invoke("Attack", 1.0f);
     }
     public void Attack(){
-        Enemy1controller.SetBool("Attack", true);
-        Debug.Log("Attack");
-        attacked = 1;
+        Enemy1animator.SetBool("Attack", true);
     }
 
     private void OnTriggerEnter(Collider other)

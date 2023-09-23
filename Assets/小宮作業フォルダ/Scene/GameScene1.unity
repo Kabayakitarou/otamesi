@@ -2648,7 +2648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textUI: {fileID: 1845298881}
   PlayerEXPtext: {fileID: 2024906499}
-  psm: {fileID: 1443373853}
+  psm: {fileID: 0}
 --- !u!1001 &743293913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7073,17 +7073,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000010376938618, guid: 8f9905bf996cdc74cb9766b8781e580e, type: 3}
   m_PrefabInstance: {fileID: 1442867001}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1443373853 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1443373853, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-  m_PrefabInstance: {fileID: 913138922917623970}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adf0c1a4b77d26e49bd3e11946e00127, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1456576711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10856,41 +10845,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1443373853, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-      propertyPath: HPGage
-      value: 
-      objectReference: {fileID: 211712979}
-    - target: {fileID: 1443373853, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-      propertyPath: TextHP
-      value: 
-      objectReference: {fileID: 1313911530}
-    - target: {fileID: 1443373853, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-      propertyPath: HPCanvas
-      value: 
-      objectReference: {fileID: 306097888}
-    - target: {fileID: 1443373853, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-      propertyPath: enemy1Controller
-      value: 
-      objectReference: {fileID: 567943941933086613, guid: 0d5bc83a1a7f6fe429729e0f41437a97, type: 3}
-    - target: {fileID: 1443373853, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-      propertyPath: animatorList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1443373853, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-      propertyPath: animatorList.Array.data[0]
-      value: 
-      objectReference: {fileID: 7164625447147089307, guid: 0d5bc83a1a7f6fe429729e0f41437a97, type: 3}
-    - target: {fileID: 1443373853, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-      propertyPath: animatorList.Array.data[1]
-      value: 
-      objectReference: {fileID: 8071891400960154283, guid: e46536692a78fb2428ab125b290fb3ca, type: 3}
     - target: {fileID: 912098419604597999, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 913138923694613490, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 917613980692552455, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
       propertyPath: m_RootOrder
@@ -10936,6 +10893,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3041998228761187090, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: HPGage
+      value: 
+      objectReference: {fileID: 211712979}
+    - target: {fileID: 3041998228761187090, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: TextHP
+      value: 
+      objectReference: {fileID: 1313911530}
+    - target: {fileID: 3041998228761187090, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
+      propertyPath: HPCanvas
+      value: 
+      objectReference: {fileID: 306097888}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eb9bf95de9b68744ab1c355ba2155a8, type: 3}
 --- !u!1001 &3803574770273790611

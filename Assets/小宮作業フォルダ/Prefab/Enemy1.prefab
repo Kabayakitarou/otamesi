@@ -399,12 +399,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0362cb2835213514fa4c6e3027c955ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy1controller: {fileID: 7164625447147089307}
+  Enemy1animator: {fileID: 7164625447147089307}
   Timer: 0
   ChangeTime: 3
   WalkSpeed: 0.005
   RunSpeed: 0.008
   AttackDamage: 5
+  playerStatusManager: {fileID: 7610095626401110552, guid: ede778ff6f01e7349bfceb6e7ec97d14, type: 3}
 --- !u!65 &8994287709764195856
 BoxCollider:
   m_ObjectHideFlags: 0

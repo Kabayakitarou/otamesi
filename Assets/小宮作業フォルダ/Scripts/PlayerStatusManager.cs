@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PlayerStatusManager : MonoBehaviour
 {
     public GameObject Main;
-    public int HP;
-    public int MaxHP;
+    public static int HP = 100;
+    public static int MaxHP = 100;
     public Text TextHP;
     public GameObject HPCanvas;
     public Image HPGage;
@@ -21,7 +21,20 @@ public class PlayerStatusManager : MonoBehaviour
     public Animator Animator;
     public Enemy1Controller enemy1Controller;
 
+    private bool PlayerDamage = true;
+
+    public static PlayerStatusManager instance;
+
     void Start(){
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void Update()
@@ -38,7 +51,6 @@ public class PlayerStatusManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
         }
         MaxHP = StepCountButton.PlayerLevel*100;
-        HP = MaxHP;
         float percent = (float)HP / MaxHP;
         HPGage.fillAmount = percent;
         TextHP.text = HP.ToString();
@@ -46,8 +58,20 @@ public class PlayerStatusManager : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if(other.tag == DamageDetermination & enemy1Controller.attacked == 1)
-        {
+        if(other.tag == DamageDetermination){
+            PlayerDamage = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if(other.tag == DamageDetermination){
+            bool PlayerDamage = false;
+        }
+    }
+
+    public void EnemyAttack(){
+        if(PlayerDamage == true){
             Debug.Log("Damage");
             Damage();
         }
@@ -55,9 +79,9 @@ public class PlayerStatusManager : MonoBehaviour
 
     void Damage()
     {
-        enemy1Controller = GameObject.Find("Enemy1").GetComponent<Enemy1Controller>();
         Animator.SetTrigger("Hit");
         audioSorce.PlayOneShot(HitSE);
         HP -= enemy1Controller.AttackDamage;
     }
+
 }
