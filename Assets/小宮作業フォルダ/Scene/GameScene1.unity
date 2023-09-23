@@ -2648,7 +2648,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textUI: {fileID: 1845298881}
   PlayerEXPtext: {fileID: 2024906499}
-  psm: {fileID: 0}
 --- !u!1001 &743293913
 PrefabInstance:
   m_ObjectHideFlags: 0
