@@ -9,7 +9,6 @@ public class Enemy1Controller : MonoBehaviour
     public float ChangeTime;
     public float WalkSpeed;
     public float RunSpeed;
-    public int AttackDamage = 5;
     internal GameObject Target;
 
     void Start(){
@@ -68,6 +67,7 @@ public class Enemy1Controller : MonoBehaviour
     }
 
     void EnemyAttackOn(){
+        PlayerStatusManager.Damagenum = 5;
         PlayerStatusManager.instance.EnemyAttack();
     }
 

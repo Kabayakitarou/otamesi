@@ -22,6 +22,7 @@ public class PlayerStatusManager : MonoBehaviour
     public Enemy1Controller enemy1Controller;
 
     private bool PlayerDamage = true;
+    public static int Damagenum = 0;
 
     public static PlayerStatusManager instance;
 
@@ -81,7 +82,7 @@ public class PlayerStatusManager : MonoBehaviour
     {
         Animator.SetTrigger("Hit");
         audioSorce.PlayOneShot(HitSE);
-        HP -= enemy1Controller.AttackDamage;
+        HP -= Damagenum;
     }
 
 }
