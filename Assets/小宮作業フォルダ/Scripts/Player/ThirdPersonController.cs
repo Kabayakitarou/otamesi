@@ -172,10 +172,14 @@ namespace StarterAssets
                 if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle Walk Run Blend"))
                 {
                     StarterAssetsThirdPerson.SetBool("Attack_CanMove", false);
-                    audioSource.PlayOneShot(AttackSE);
                 }
             }
         }
+
+        void AttackAudio(){
+            audioSource.PlayOneShot(AttackSE);
+        }
+
         void WeaponON()
         {
             WeaponCollider.enabled = true;
