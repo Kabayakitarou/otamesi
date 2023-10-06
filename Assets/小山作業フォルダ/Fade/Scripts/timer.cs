@@ -1,23 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
-using UnityEngine.UI;  
- 
-public class timer : MonoBehaviour {
- 
- 
-    public GameObject score_object ; 
- 
-      
-      void Start () {
-      }
- 
-      
-      void Update () {
+using UnityEngine.UI;
+
+public class timer : MonoBehaviour
+{   
+    public Text sleepTime; 
+    
+    
+    void Start()
+    {
         
-        Text score_text = score_object.GetComponent<Text> ();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Text score_text = score_object.GetComponent<Text> ();
+        sleepTime.text = aiueo.AAA;
         
-        score_text.text = "time:" + Time.time;
-      }
+    }
 }
