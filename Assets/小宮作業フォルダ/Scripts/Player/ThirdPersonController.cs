@@ -17,6 +17,8 @@ namespace StarterAssets
         public AudioSource audioSource;
         public AudioClip AttackSE;
 
+        public CharacterController MainCollider;
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
